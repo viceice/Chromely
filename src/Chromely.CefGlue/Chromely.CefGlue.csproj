@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Platforms>AnyCPU</Platforms>
     <ProductVersion>5.0.83.0</ProductVersion>
     <AssemblyVersion>5.0.83.0</AssemblyVersion>
@@ -25,15 +25,16 @@
     <Configurations>Debug;Release;ReleaseLinux;DebugLinux</Configurations>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>bin\Debug\netstandard2.1\Chromely.CefGlue.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\$(TargetFramework)\Chromely.CefGlue.xml</DocumentationFile>
     <NoWarn>1701;1702; NU5125;7035</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>bin\Release\netstandard2.1\Chromely.CefGlue.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\$(TargetFramework)\Chromely.CefGlue.xml</DocumentationFile>
     <NoWarn>1701;1702; NU5125;7035</NoWarn>
   </PropertyGroup>
 
